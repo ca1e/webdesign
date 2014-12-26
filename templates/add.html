@@ -1,0 +1,42 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>document</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>name</td>
+			<td>auth</td>
+		</tr>
+		<!-- BEGIN list --> 
+		<tr>
+			<td>{name}</td>
+			<td>{auth}</td>
+		</tr>
+		<!-- END list --> 
+	</table>
+	<form method="post">
+	<label>name:</label>
+	<input type="text" name="thename"><br>
+	<label>auth:</label>
+	<input type="text" name="theauth"><br>
+	<label>info:</label>
+	<textarea type="text" name="theinf">	
+	</textarea>
+	<button>ADD</button><br>
+	</form>
+	<form method="post">
+	<label>delname:</label>
+	<input type="text" name="delname">
+	<button>DEL</button>
+	</form>
+	<form method="post">
+	<label>ourrunning</label>
+	<label>{arerun}</label>
+	<input name="isrun" type="hidden">
+	<button>GO</button>
+	</form>
+</html>

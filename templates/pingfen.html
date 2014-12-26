@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>评委投票</title>
+    <link rel="shortcut icon" href="KX.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <style type='text/css'>
+      body {
+        background-color: #CCC;
+      }
+    </style>
+  </head>
+<body>
+<!--
+编码太乱，别学我~
+-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            网页设计大赛 v1.0
+          </a>
+        </div>
+        </div>
+      </div>
+    </nav>
+<div class="jumbotron">
+      <div class="container">
+        <h1>网页设计大赛评委页面</h1>
+        <span>
+        	{posinfo}
+        </span>
+      </div>
+    </div>
+    <div class="container">
+    <form method='post'>
+      <div class="row">
+        <div class="col-md-12">
+        <h3>美工</h3>
+          <p><dl>
+            <dt>布局</dt>
+              <dd>
+                <div id="mgbj" class="btn-group" data-toggle="buttons">
+                </div></dd>
+              <dt>色彩搭配</dt>
+              <dd><div id="scdp" class="btn-group" data-toggle="buttons">
+                </div></dd>
+          </dl></p>
+        </div>
+        <div class="col-md-12">
+        <h3>技术</h3>
+          <p><dl>
+            <dt>网页效果</dt>
+              <dd><div id="wyxg" class="btn-group" data-toggle="buttons">
+                </div></dd>
+              <dt>代码</dt>
+              <dd><div id="jsdm" class="btn-group" data-toggle="buttons">
+                </div></dd>
+          </dl></p>
+        </div>
+        <div class="col-md-12">
+        <h3>内容创意</h3>
+          <p><dl>
+            <dt>主题</dt>
+              <dd><div id="nrzt" class="btn-group" data-toggle="buttons">
+                </div></dd>
+              <dt>内容</dt>
+              <dd><div id="nrnr" class="btn-group" data-toggle="buttons">
+                </div></dd>
+              <dt>新颖度</dt>
+              <dd><div id="nrxy" class="btn-group" data-toggle="buttons">
+                </div></dd>
+          </dl></p>
+        </div>
+        <div class="col-md-12">
+        <h3>讲解</h3>
+          <p><dl>
+            <dt>流畅度</dt>
+              <dd><div id="lcd" class="btn-group" data-toggle="buttons">
+                </div></dd>
+              <dt>态度</dt>
+              <dd><div id="jjtd" class="btn-group" data-toggle="buttons">
+                </div></dd>
+              <dt>详细度</dt>
+              <dd><div id="xxd" class="btn-group" data-toggle="buttons">
+                </div></dd>
+          </dl></p>
+        </div>
+      </div>
+      <div class="col-md-12">
+      <input type="hidden" {posval}>
+
+       <button type="sumit" class="btn btn-success btn-block">
+          下一组
+        </button>
+      </div>
+      </form>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    function addbtn(theid,thename)
+    {
+        $(theid).append('<label class="btn btn-primary active"><input type="radio" name="'
+        +thename+'" value=0 checked>0 分</label>');
+        for(i=1;i<11;i++)
+        {
+        $(theid).append('<label class="btn btn-primary"><input type="radio" name="'+thename
+        +'" value='+i+'>'+i+' 分</label>');
+        }
+    }
+    addbtn('#mgbj','mg-bj');
+    addbtn('#scdp','sc-dp');
+    
+    addbtn('#wyxg','wy-xg');
+    addbtn('#jsdm','js-dm');
+    
+    addbtn('#nrzt','nr-zt');
+    addbtn('#nrnr','nr-nr');
+    addbtn('#nrxy','nr-xy');
+    
+    addbtn('#lcd','lc-d');
+    addbtn('#jjtd','jj-td');
+    addbtn('#xxd','xx-d');
+    </script>
+  </body>
+</html>

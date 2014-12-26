@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+    TWDC - The Web Design Competition</title>
+    <link rel="shortcut icon" href="KX.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <style type='text/css'>
+      body {
+        background-color: #CCC;
+      }
+    </style>
+  </head>
+   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            网页设计大赛 v1.0
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form" method="post">
+            <div class="form-group">
+              <input type="password" placeholder="Username" class="form-control">
+            </div>
+            <button id="GO" type="button" class="btn btn-success" data-toggle="modal" data-target="#tipModal">Go</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>网页设计大赛投票系统</h1>
+        <p>这里，给你一个设计的天地，这里，给你一个创造的舞台；灵感结合代码，设计出属于自己的网页，展示出属于自己的风采；梦想照进现实，编织出属于自己的梦想，创造出属于自己的精彩。网页设计大赛，用灵感构筑梦想，技术编织未来～</p>
+        <p>
+        <a type="button" href="?act=rt"
+        class="btn btn-primary btn-lg">
+          查看投票结果 &raquo;</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container"> 
+      <div class="row">
+        <!-- BEGIN list --> 
+        <div class="col-md-4">
+        <h2>{err}</h2><p><dl>
+        <dt>{err1}</dt><dd>
+        {err2}
+        </dd></dl></p><p>
+        <button class="btn btn-info {rltclass}" type="sumit">投他一票 &raquo;</button>
+        </p></div>
+        <!-- END list --> 
+      </div>
+
+      <hr>
+      <footer>
+        <p>&copy; 华信软件学院科协</p>
+      </footer>
+    </div>
+      <div class="modal fade" id="touModal" tabindex="-1" role="dialog" aria-labelledby="touModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title"
+        id="touModalLabel">
+        投票提示</h4>
+      </div>
+          <div class="modal-body">
+          <div class="form-group">
+          <label for="InputCenum">请输入你的学号</label>
+          <input type="text" class="form-control" id="InputCenum" name="celnum" placeholder="学号">
+          </div>
+          </div>
+          <div class="modal-footer">
+          <button type="submit" class="btn btn-success">确定</button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+    <div class="modal fade" id="tipModal" tabindex="-1" role="dialog" aria-labelledby="tipSmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title"
+        id="tipSmallModalLabel">
+        可爱的提示</h4>
+      </div>
+      <div class="modal-body">
+        密码错误，你还有3次机会
+      </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
